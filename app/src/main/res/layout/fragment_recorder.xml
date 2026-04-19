@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+        <TextView android:id="@+id/tvRecStatus" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Not Recording" android:textSize="15sp" android:textStyle="bold"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnToggleRec"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/start_record"/>
+    </LinearLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Saved Recordings" android:textSize="14sp" android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerRec"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:clipToPadding="false" android:paddingBottom="80dp"/>
+    <TextView android:id="@+id/tvNoRec" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:gravity="center"
+        android:text="No recordings yet" android:textColor="?attr/colorOnSurfaceVariant"/>
+</LinearLayout>
